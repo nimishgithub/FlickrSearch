@@ -15,6 +15,5 @@ extension View {
                 view
                     .accessibility(hint: Text(unwrapped))
             }
-            
     }
 }

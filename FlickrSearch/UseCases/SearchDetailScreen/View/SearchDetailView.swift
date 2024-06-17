@@ -13,12 +13,12 @@ private struct Constants {
         static let titleImageHeight: CGFloat = 250
         static let titleImageCornerRadius: CGFloat = 10
     }
-    
+
     struct UITexts {
         static let dimensions = "Dimensions"
         static let tags = "Tags"
     }
-    
+
     struct AccessibilityTexts {
         static let image = "Image"
         static let doubleTapToSeeVoiceOver = "Double-tap to see detail screen"

@@ -11,11 +11,11 @@ struct SearchResultItem: Codable, Identifiable {
     let description: String
     let published: Date
     let author, authorID, tags: String
-    
+
     var imageURLString: String {
         media.m
     }
-    
+
     enum CodingKeys: String, CodingKey {
         case title, link, media
         case dateTaken = "date_taken"
@@ -23,7 +23,7 @@ struct SearchResultItem: Codable, Identifiable {
         case authorID = "author_id"
         case tags
     }
-    
+
     func extractedImageSize(from description: String) -> (width: Int, height: Int)? {
         guard let doc = try? SwiftSoup.parse(description),
            let imgElement = try? doc.select("img").first(),
@@ -35,7 +35,7 @@ struct SearchResultItem: Codable, Identifiable {
         }
         return (width, height)
     }
-    
+
     struct Media: Codable {
         let m: String
     }

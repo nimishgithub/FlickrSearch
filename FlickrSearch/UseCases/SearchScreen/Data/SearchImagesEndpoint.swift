@@ -15,7 +15,7 @@ struct SearchImagesEndPoint: EndPoint {
         APIKey.format.rawValue: "json",
         APIKey.nojsoncallback.rawValue: "1"
     ]
-    
+
     init(searchQuery: String) {
         queryItems?[APIKey.tags.rawValue] = searchQuery
     }

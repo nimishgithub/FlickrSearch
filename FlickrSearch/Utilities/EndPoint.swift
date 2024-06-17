@@ -17,21 +17,21 @@ extension EndPoint {
     var host: String {
         "api.flickr.com"
     }
-    
+
     var url: URL? {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = host
         urlComponents.path = path
-        
+
         var requestQueryItems: [URLQueryItem] = []
-        
+
         queryItems?.forEach { item in
             requestQueryItems.append(URLQueryItem(name: item.key, value: item.value))
         }
-        
+
         urlComponents.queryItems = requestQueryItems
-        
+
         return urlComponents.url
     }
 }

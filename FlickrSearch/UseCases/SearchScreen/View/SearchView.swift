@@ -7,7 +7,7 @@ private struct Constants {
         static let loadingResultsText = "Loading Results..."
         static let startTypingInSearchBarText = "Start typing in the search bar above"
     }
-    
+
     struct AccessibilityTexts {
         static let image = "Image"
         static let doubleTapToSeeVoiceOver = "Double-tap to see detail screen"
@@ -15,9 +15,9 @@ private struct Constants {
 }
 
 struct SearchView<ViewModel: SearchViewModelProtocol>: View {
-    
+
     @StateObject var viewModel: ViewModel
-    
+
     var body: some View {
         NavigationView {
             VStack {
@@ -46,7 +46,7 @@ struct SearchView<ViewModel: SearchViewModelProtocol>: View {
         }
         .searchable(text: $viewModel.searchString)
     }
-    
+
     @ViewBuilder
     private var searchGuideView: some View {
         ZStack {
@@ -63,7 +63,7 @@ struct SearchView<ViewModel: SearchViewModelProtocol>: View {
             .padding(.top, 50)
         }
     }
-    
+
     @ViewBuilder
     private func gridView(_ dataSource: [SearchResultItem]) -> some View {
         GeometryReader { geometry in

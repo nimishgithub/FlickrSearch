@@ -12,14 +12,14 @@ final class SearchViewModel: SearchViewModelProtocol {
 
     @Published var viewState: SearchViewState<[SearchResultItem]> = .loaded([])
     @Published var searchString: String = ""
-    
+
     private var cancellables = Set<AnyCancellable>()
-    
+
     init(searchInteractor: SearchInteractorProtocol) {
         self.searchInteractor = searchInteractor
         self.setupSearch()
     }
-    
+
     private func setupSearch() {
         $searchString
             .debounce(for: .milliseconds(100), scheduler: RunLoop.main)
@@ -36,7 +36,6 @@ final class SearchViewModel: SearchViewModelProtocol {
                         }
                     })
                     .eraseToAnyPublisher()
-                
             }
             .receive(on: DispatchQueue.main)
             .assign(to: \.viewState, on: self)

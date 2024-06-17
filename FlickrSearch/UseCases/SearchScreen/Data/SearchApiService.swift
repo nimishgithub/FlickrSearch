@@ -10,11 +10,11 @@ import Combine
 
 final class SearchApiService: SearchApiServiceProtocol {
     private let networkingService: NetworkingServiceProtocol
-    
+
     init(networkingService: NetworkingServiceProtocol = NetworkingManager.shared) {
         self.networkingService = networkingService
     }
-    
+
     func searchImages(query: String) -> AnyPublisher<SearchApiResponse, NetworkingError> {
         networkingService.get(endpoint: SearchImagesEndPoint(searchQuery: query))
     }

@@ -9,16 +9,16 @@ import Foundation
 import Combine
 
 final class NetworkingManager: NetworkingServiceProtocol {
-    
+
     static let shared = NetworkingManager()
-    
+
     private init() { }
-    
+
     func get<T: Decodable>(endpoint: EndPoint) -> AnyPublisher<T, NetworkingError> {
         guard let url = endpoint.url else {
             return Fail(error: NetworkingError.unknownError).eraseToAnyPublisher()
         }
-        
+
         return URLSession.shared.dataTaskPublisher(for: url)
             .map(\.data)
             .mapError { NetworkingError.urlError($0) }
@@ -44,7 +44,7 @@ enum NetworkingError: LocalizedError {
     case urlError(URLError)
     case decodingError(DecodingError)
     case unknownError
-    
+
     var errorDescription: String? {
         switch self {
         case .urlError(let error):
