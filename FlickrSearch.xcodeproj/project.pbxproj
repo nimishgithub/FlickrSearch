@@ -71,7 +71,6 @@
 		B98F049E2C1DA86E0098D67D /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		B98F04A02C1DAAF30098D67D /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		B98F04B02C1E5C8D0098D67D /* NetworkingServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingServiceProtocol.swift; sourceTree = "<group>"; };
-		B98F04B42C1E5FAB0098D67D /* DesignSystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DesignSystem; path = ../../DesignSystem; sourceTree = "<group>"; };
 		B98F04FD2C1E77850098D67D /* SearchApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchApiResponse.swift; sourceTree = "<group>"; };
 		B98F04FF2C1E779A0098D67D /* SearchApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchApiService.swift; sourceTree = "<group>"; };
 		B98F05012C1E77A20098D67D /* SearchApiServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchApiServiceProtocol.swift; sourceTree = "<group>"; };
@@ -91,6 +90,7 @@
 		B98F05282C1EEC1E0098D67D /* SearchDetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewState.swift; sourceTree = "<group>"; };
 		B98F052D2C1FC18C0098D67D /* Accessibility+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Accessibility+Extension.swift"; sourceTree = "<group>"; };
 		B98F052F2C1FC3310098D67D /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		B98F05362C1FE5F60098D67D /* DesignSystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DesignSystem; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +144,7 @@
 		B98F045F2C1D80E70098D67D /* FlickrSearch */ = {
 			isa = PBXGroup;
 			children = (
-				B98F04B42C1E5FAB0098D67D /* DesignSystem */,
+				B98F05362C1FE5F60098D67D /* DesignSystem */,
 				B98F049D2C1DA86E0098D67D /* Utilities */,
 				B98F05312C1FD3F10098D67D /* Helpers */,
 				B98F04BA2C1E67430098D67D /* UseCases */,
