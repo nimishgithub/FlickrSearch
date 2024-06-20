@@ -12,7 +12,7 @@ protocol ViewState {
 }
 
 enum SearchViewState<Data>: ViewState {
-    typealias Data = [SearchResultItem]
+    typealias Data = Data
     case loading
     case loaded(Data)
     case error(Error)

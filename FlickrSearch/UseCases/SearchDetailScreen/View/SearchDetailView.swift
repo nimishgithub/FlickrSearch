@@ -28,10 +28,10 @@ private struct Constants {
 }
 
 struct SearchDetailView<ViewModel: SearchDetailViewModelProtocol>: View {
-    
+
     @StateObject var viewModel: ViewModel
     @State private var showingShareSheet = false
-    
+
     var body: some View {
         ScrollView {
             switch viewModel.viewState {
@@ -61,7 +61,7 @@ struct SearchDetailView<ViewModel: SearchDetailViewModelProtocol>: View {
             }
         }
     }
-    
+
     @ViewBuilder
     private func dimensionView(_ viewState: SearchResultItem) -> some View {
         if let dimensions = viewState.extractedImageSize(from: viewState.description) {
@@ -76,7 +76,7 @@ struct SearchDetailView<ViewModel: SearchDetailViewModelProtocol>: View {
             }
         }
     }
-    
+
     @ViewBuilder
     private func tagView(_ viewState: SearchResultItem) -> some View {
         let items = viewState.tags
