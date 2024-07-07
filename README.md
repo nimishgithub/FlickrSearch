@@ -1,2 +1,2 @@
 # FlickrSearch
-A SwiftUI-based iOS application that allows users to search for images on Flickr, displaying results in real-time as the user types. Tapping an image shows a detailed view with additional metadata.
+A SwiftUI-based iOS application enables real-time Flickr image searches, displaying results instantly as users type. Tapping an image reveals a detailed view with additional metadata. This app also showcases exemplary code separation and employs MVVM with interactor and repository architecture, leveraging modern software development techniques for maintainability and scalability.
